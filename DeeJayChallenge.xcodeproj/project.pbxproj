@@ -54,6 +54,7 @@
 		AF77CB56173B26C300208386 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AF77CB55173B26C300208386 /* Default@2x.png */; };
 		AF77CB5D173B2B5100208386 /* AlbumTitle.m in Sources */ = {isa = PBXBuildFile; fileRef = AF77CB5C173B2B5100208386 /* AlbumTitle.m */; };
 		AF77CB60173B2BF900208386 /* Artist.m in Sources */ = {isa = PBXBuildFile; fileRef = AF77CB5F173B2BF900208386 /* Artist.m */; };
+		AF9E1EAD173C046C00398B3A /* Album.m in Sources */ = {isa = PBXBuildFile; fileRef = AF9E1EAC173C046C00398B3A /* Album.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -111,6 +112,8 @@
 		AF77CB5C173B2B5100208386 /* AlbumTitle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AlbumTitle.m; path = View/AlbumTitle.m; sourceTree = "<group>"; };
 		AF77CB5E173B2BF900208386 /* Artist.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Artist.h; path = View/Artist.h; sourceTree = "<group>"; };
 		AF77CB5F173B2BF900208386 /* Artist.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Artist.m; path = View/Artist.m; sourceTree = "<group>"; };
+		AF9E1EAB173C046C00398B3A /* Album.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Album.h; path = Model/Album.h; sourceTree = "<group>"; };
+		AF9E1EAC173C046C00398B3A /* Album.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Album.m; path = Model/Album.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,6 +160,7 @@
 		AF77CAF4173B209500208386 /* DeeJayChallenge */ = {
 			isa = PBXGroup;
 			children = (
+				AF9E1EA1173BE7D600398B3A /* Model */,
 				AF77CB57173B2A3C00208386 /* View */,
 				AF77CAFD173B209500208386 /* AppDelegate.h */,
 				AF77CAFE173B209500208386 /* AppDelegate.m */,
@@ -249,6 +253,15 @@
 				AF77CB5F173B2BF900208386 /* Artist.m */,
 			);
 			name = View;
+			sourceTree = "<group>";
+		};
+		AF9E1EA1173BE7D600398B3A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				AF9E1EAB173C046C00398B3A /* Album.h */,
+				AF9E1EAC173C046C00398B3A /* Album.m */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -356,6 +369,7 @@
 				AF77CB0E173B20AA00208386 /* MainViewController.m in Sources */,
 				AF77CB5D173B2B5100208386 /* AlbumTitle.m in Sources */,
 				AF77CB60173B2BF900208386 /* Artist.m in Sources */,
+				AF9E1EAD173C046C00398B3A /* Album.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -472,6 +486,7 @@
 				AF77CB0A173B209500208386 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

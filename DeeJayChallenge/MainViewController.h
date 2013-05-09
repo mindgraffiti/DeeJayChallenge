@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface MainViewController : UIViewController
+@property (strong, nonatomic) NSArray *albumArt;
 @property (weak, nonatomic) IBOutlet UILabel *albumTitle;
 @property (weak, nonatomic) IBOutlet UILabel *artist;
 @end
