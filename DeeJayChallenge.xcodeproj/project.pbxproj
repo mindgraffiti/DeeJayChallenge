@@ -54,6 +54,7 @@
 		AF77CB60173B2BF900208386 /* Artist.m in Sources */ = {isa = PBXBuildFile; fileRef = AF77CB5F173B2BF900208386 /* Artist.m */; };
 		AF9E1EAD173C046C00398B3A /* Album.m in Sources */ = {isa = PBXBuildFile; fileRef = AF9E1EAC173C046C00398B3A /* Album.m */; };
 		AF9E1EB4173C706200398B3A /* AudioButton.m in Sources */ = {isa = PBXBuildFile; fileRef = AF9E1EB3173C706200398B3A /* AudioButton.m */; };
+		AF9E1EB6173C763D00398B3A /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF9E1EB5173C763D00398B3A /* MediaPlayer.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -113,6 +114,7 @@
 		AF9E1EAC173C046C00398B3A /* Album.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Album.m; path = Model/Album.m; sourceTree = "<group>"; };
 		AF9E1EB2173C706200398B3A /* AudioButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioButton.h; sourceTree = "<group>"; };
 		AF9E1EB3173C706200398B3A /* AudioButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioButton.m; sourceTree = "<group>"; };
+		AF9E1EB5173C763D00398B3A /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +122,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF9E1EB6173C763D00398B3A /* MediaPlayer.framework in Frameworks */,
 				AF77CAEF173B209500208386 /* UIKit.framework in Frameworks */,
 				AF77CAF1173B209500208386 /* Foundation.framework in Frameworks */,
 				AF77CAF3173B209500208386 /* CoreGraphics.framework in Frameworks */,
@@ -149,6 +152,7 @@
 		AF77CAED173B209500208386 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				AF9E1EB5173C763D00398B3A /* MediaPlayer.framework */,
 				AF77CAEE173B209500208386 /* UIKit.framework */,
 				AF77CAF0173B209500208386 /* Foundation.framework */,
 				AF77CAF2173B209500208386 /* CoreGraphics.framework */,

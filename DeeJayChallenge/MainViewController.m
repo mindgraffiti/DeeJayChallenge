@@ -21,7 +21,10 @@
     [super viewDidLoad];
     [self displayLogo];
     [self buildAlbum];
-    
+    [self setupAudio];
+    self.buttonID = [NSString stringWithFormat:@"Test"];
+    NSLog(@"Test: %@",self.buttonID);
+    self.activePlayer = self.audioPlayer;
 }
 
 - (void)displayLogo{
@@ -78,6 +81,7 @@
                 [self.view addSubview:buttonPlayPause];
                 [buttonPlayPause addTarget:self action:@selector(handlePlayPause:) forControlEvents:UIControlEventTouchUpInside];
                 buttonPlayPause.albumTitle = titleText;
+                
                 count++;
                 NSLog(@"Count: %d", count);
             }
@@ -86,11 +90,53 @@
 
 - (IBAction)handlePlayPause:(id)sender{
     UIButton *ButtonPushed = (UIButton *)sender;
+    self.buttonID = [sender albumTitle];
     NSLog(@"Button pressed: %@",[sender albumTitle]);
-    NSLog(@"Play button pushed");
+    
+    if (self.audioPlayer.playbackState == MPMoviePlaybackStateStopped || self.audioPlayer.playbackState == MPMoviePlaybackStatePaused){
+        [ButtonPushed setImage:[UIImage imageNamed:@"PauseIcon"] forState:UIControlStateNormal];
+        [self playAudio];
+    } else {
+        [ButtonPushed setImage:[UIImage imageNamed:@"PlayIcon"] forState:UIControlStateNormal];
+        [self pauseAudio];
+        NSLog(@"Pause button pushed");
+    }
     
 }
+- (void)switchAudio{
+    NSLog(@"Button info received %@",self.buttonID);
+    if ([self.buttonID isEqualToString:@"King Solomon's Mine"]) {
+        self.url = [NSURL URLWithString:@"http://www.archive.org/download/king_solomon_librivox/kingsolomonsmines_01_haggard_64kb.mp3"];
+    } else if ([self.buttonID isEqualToString:@"Childe Roland"]){
+        self.url = [NSURL URLWithString:@"http://www.archive.org/download/browning200_vol1_1203_librivox/200browningvol1_andreadelsarto_browning_64kb.mp3"];
+    } else if ([self.buttonID isEqualToString:@"Moby Dick"]){
+        self.url = [NSURL URLWithString:@"http://www.archive.org/download/moby_dick_librivox/mobydick_000_melville_64kb.mp3"];
+        NSLog(@"URL set to Moby Dick");
+    } else if ([self.buttonID isEqualToString:@"The Willows"]){
+        self.url = [NSURL URLWithString:@"http://www.archive.org/download/willows_mtr_librivox/willows_01_blackwood_64kb.mp3"];
+    } else if ([self.buttonID isEqualToString:@"Heart of Darkness"]){
+        self.url = [NSURL URLWithString:@"http://www.archive.org/download/heart_of_darkness/heart_of_darkness_1a_conrad_64kb.mp3"];
+    } else if ([self.buttonID isEqualToString:@"Botchan"]){
+        self.url = [NSURL URLWithString:@"http://www.archive.org/download/botchan_ava_librivox/botchan_00_natsume_64kb.mp3"];
+    } else {
+        NSLog(@"Error occurred @switchAudio method");
+    }
+}
+- (void)setupAudio{
+    [self switchAudio];
+     //self.url = [NSURL URLWithString:@"http://www.archive.org/download/king_solomon_librivox/kingsolomonsmines_01_haggard_64kb.mp3"];
+    self.audioPlayer = [[MPMoviePlayerController alloc] init];
+    self.audioPlayer.movieSourceType = MPMovieSourceTypeStreaming;
+    self.audioPlayer.contentURL = self.url;
+    [self.audioPlayer prepareToPlay];
+}
 
+- (void)playAudio{
+    [self.audioPlayer play];
+}
+- (void)pauseAudio{
+    [self.audioPlayer pause];
+}
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];

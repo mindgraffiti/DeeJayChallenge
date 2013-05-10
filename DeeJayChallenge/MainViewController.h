@@ -7,9 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface MainViewController : UIViewController
+#import <MediaPlayer/MediaPlayer.h>
+@interface MainViewController : UIViewController <UINavigationControllerDelegate,UIImagePickerControllerDelegate>
 @property (strong, nonatomic) NSArray *albumArt;
-@property (weak, nonatomic) IBOutlet UILabel *albumTitle;
-@property (weak, nonatomic) IBOutlet UILabel *artist;
+@property (strong, nonatomic) MPMoviePlayerController *audioPlayer;
+@property (strong, nonatomic) MPMoviePlayerController *activePlayer;
+@property (strong, nonatomic) NSString *buttonID;
+@property (strong, nonatomic) NSURL *url;
 @end
