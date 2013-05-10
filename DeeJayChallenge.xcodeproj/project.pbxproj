@@ -50,11 +50,10 @@
 		AF77CB4E173B261500208386 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AF77CB4D173B261500208386 /* Icon@2x.png */; };
 		AF77CB50173B263F00208386 /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = AF77CB4F173B263F00208386 /* Icon-72.png */; };
 		AF77CB52173B264200208386 /* Icon-72@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AF77CB51173B264200208386 /* Icon-72@2x.png */; };
-		AF77CB54173B26B700208386 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = AF77CB53173B26B700208386 /* Default.png */; };
-		AF77CB56173B26C300208386 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AF77CB55173B26C300208386 /* Default@2x.png */; };
 		AF77CB5D173B2B5100208386 /* AlbumTitle.m in Sources */ = {isa = PBXBuildFile; fileRef = AF77CB5C173B2B5100208386 /* AlbumTitle.m */; };
 		AF77CB60173B2BF900208386 /* Artist.m in Sources */ = {isa = PBXBuildFile; fileRef = AF77CB5F173B2BF900208386 /* Artist.m */; };
 		AF9E1EAD173C046C00398B3A /* Album.m in Sources */ = {isa = PBXBuildFile; fileRef = AF9E1EAC173C046C00398B3A /* Album.m */; };
+		AF9E1EB4173C706200398B3A /* AudioButton.m in Sources */ = {isa = PBXBuildFile; fileRef = AF9E1EB3173C706200398B3A /* AudioButton.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -106,14 +105,14 @@
 		AF77CB4D173B261500208386 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon@2x.png"; path = "../../Icon@2x.png"; sourceTree = "<group>"; };
 		AF77CB4F173B263F00208386 /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-72.png"; path = "../../Icon-72.png"; sourceTree = "<group>"; };
 		AF77CB51173B264200208386 /* Icon-72@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-72@2x.png"; path = "../../Icon-72@2x.png"; sourceTree = "<group>"; };
-		AF77CB53173B26B700208386 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = ../../Default.png; sourceTree = "<group>"; };
-		AF77CB55173B26C300208386 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "../../Default@2x.png"; sourceTree = "<group>"; };
 		AF77CB5B173B2B5100208386 /* AlbumTitle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AlbumTitle.h; path = View/AlbumTitle.h; sourceTree = "<group>"; };
 		AF77CB5C173B2B5100208386 /* AlbumTitle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AlbumTitle.m; path = View/AlbumTitle.m; sourceTree = "<group>"; };
 		AF77CB5E173B2BF900208386 /* Artist.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Artist.h; path = View/Artist.h; sourceTree = "<group>"; };
 		AF77CB5F173B2BF900208386 /* Artist.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Artist.m; path = View/Artist.m; sourceTree = "<group>"; };
 		AF9E1EAB173C046C00398B3A /* Album.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Album.h; path = Model/Album.h; sourceTree = "<group>"; };
 		AF9E1EAC173C046C00398B3A /* Album.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Album.m; path = Model/Album.m; sourceTree = "<group>"; };
+		AF9E1EB2173C706200398B3A /* AudioButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioButton.h; sourceTree = "<group>"; };
+		AF9E1EB3173C706200398B3A /* AudioButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioButton.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,6 +168,8 @@
 				AF77CB0B173B20AA00208386 /* MainViewController.h */,
 				AF77CB0C173B20AA00208386 /* MainViewController.m */,
 				AF77CB0D173B20AA00208386 /* MainViewController.xib */,
+				AF9E1EB2173C706200398B3A /* AudioButton.h */,
+				AF9E1EB3173C706200398B3A /* AudioButton.m */,
 			);
 			path = DeeJayChallenge;
 			sourceTree = "<group>";
@@ -190,8 +191,6 @@
 		AF77CB10173B25E600208386 /* assets */ = {
 			isa = PBXGroup;
 			children = (
-				AF77CB55173B26C300208386 /* Default@2x.png */,
-				AF77CB53173B26B700208386 /* Default.png */,
 				AF77CB51173B264200208386 /* Icon-72@2x.png */,
 				AF77CB4F173B263F00208386 /* Icon-72.png */,
 				AF77CB4D173B261500208386 /* Icon@2x.png */,
@@ -352,8 +351,6 @@
 				AF77CB4E173B261500208386 /* Icon@2x.png in Resources */,
 				AF77CB50173B263F00208386 /* Icon-72.png in Resources */,
 				AF77CB52173B264200208386 /* Icon-72@2x.png in Resources */,
-				AF77CB54173B26B700208386 /* Default.png in Resources */,
-				AF77CB56173B26C300208386 /* Default@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -370,6 +367,7 @@
 				AF77CB5D173B2B5100208386 /* AlbumTitle.m in Sources */,
 				AF77CB60173B2BF900208386 /* Artist.m in Sources */,
 				AF9E1EAD173C046C00398B3A /* Album.m in Sources */,
+				AF9E1EB4173C706200398B3A /* AudioButton.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
