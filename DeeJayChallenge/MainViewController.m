@@ -91,7 +91,7 @@
 - (IBAction)handlePlayPause:(id)sender{
     UIButton *ButtonPushed = (UIButton *)sender;
     self.buttonID = [sender albumTitle];
-    NSLog(@"Button pressed: %@",[sender albumTitle]);
+    NSLog(@"Button pressed: %@",self.buttonID);
     
     if (self.audioPlayer.playbackState == MPMoviePlaybackStateStopped || self.audioPlayer.playbackState == MPMoviePlaybackStatePaused){
         [ButtonPushed setImage:[UIImage imageNamed:@"PauseIcon"] forState:UIControlStateNormal];
