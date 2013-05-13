@@ -21,8 +21,8 @@
     [super viewDidLoad];
     [self displayLogo];
     [self buildAlbum];
-    [self setupAudio];
     self.buttonID = [NSString stringWithFormat:@"Test"];
+    [self setupAudio];
     NSLog(@"Test: %@",self.buttonID);
     self.activePlayer = self.audioPlayer;
 }
@@ -89,18 +89,25 @@
 }
 
 - (IBAction)handlePlayPause:(id)sender{
+    
     UIButton *ButtonPushed = (UIButton *)sender;
     self.buttonID = [sender albumTitle];
     NSLog(@"Button pressed: %@",self.buttonID);
     
+    
     if (self.audioPlayer.playbackState == MPMoviePlaybackStateStopped || self.audioPlayer.playbackState == MPMoviePlaybackStatePaused){
         [ButtonPushed setImage:[UIImage imageNamed:@"PauseIcon"] forState:UIControlStateNormal];
+        [self switchAudio];
+        [self setupAudio];
         [self playAudio];
+        NSLog(@"Audio playing");        
     } else {
         [ButtonPushed setImage:[UIImage imageNamed:@"PlayIcon"] forState:UIControlStateNormal];
+        [self switchAudio];
         [self pauseAudio];
-        NSLog(@"Pause button pushed");
+        NSLog(@"Paused audio");
     }
+    
     
 }
 - (void)switchAudio{
@@ -119,7 +126,7 @@
     } else if ([self.buttonID isEqualToString:@"Botchan"]){
         self.url = [NSURL URLWithString:@"http://www.archive.org/download/botchan_ava_librivox/botchan_00_natsume_64kb.mp3"];
     } else {
-        NSLog(@"Error occurred @switchAudio method");
+        NSLog(@"Waiting for an album to be picked.");
     }
 }
 - (void)setupAudio{
