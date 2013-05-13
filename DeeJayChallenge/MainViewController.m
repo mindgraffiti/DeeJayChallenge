@@ -103,12 +103,10 @@
         NSLog(@"Audio playing");        
     } else {
         [ButtonPushed setImage:[UIImage imageNamed:@"PlayIcon"] forState:UIControlStateNormal];
-        [self switchAudio];
         [self pauseAudio];
+        [self switchAudio];
         NSLog(@"Paused audio");
     }
-    
-    
 }
 - (void)switchAudio{
     NSLog(@"Button info received %@",self.buttonID);
